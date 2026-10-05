@@ -53,31 +53,3 @@ highest-impact features from your spec, fully working:
   already shop-context-aware — so per-shop values work out of the box for
   a *single* pixel per shop. See roadmap below for true multi-pixel.
 
-## Honest roadmap — not yet built
-
-These were in your spec but are each a substantial sub-project on their own;
-building them shallow/untested would be worse than not shipping them. In
-priority order I'd suggest:
-
-1. **Multi-pixel-per-shop** — needs a real settings table (`id_shop`,
-   `id_pixel`, credentials) plus a repeater UI in the admin, and threading a
-   "which pixel(s) fire on this page" resolver through every hook.
-2. **Microdata Fix & Improve Engine** — parsing existing theme output,
-   diffing against Schema.org/Open Graph requirements, and safely injecting
-   only what's missing needs a dedicated scanner class and is easy to get
-   subtly wrong (duplicate tags, broken JSON-LD) without real theme testing.
-3. **Commerce Manager catalogue / Reference Diagnostics** — needs Graph API
-   catalogue endpoints, a SKU audit job, and category-to-Google-taxonomy
-   mapping UI.
-4. **Bot-signature filtering** (25+ signatures) — needs a maintained
-   user-agent/behavior ruleset; I'd rather integrate a maintained list than
-   hardcode one that goes stale.
-5. **Named third-party module auto-detection** (8 checkout modules, 3
-   wishlist modules) — each needs its actual DOM/hook contract inspected;
-   I don't want to guess selectors for modules I can't test against.
-6. **CSV audience exporter**, **CDN/cache bypass rules**, **embedded
-   tutorials** — smaller, can be added incrementally once the core is
-   validated on your actual store.
-
-Happy to build any of these out next — tell me which is highest priority and
-I'll scope and build it the same way: real code, tested logic, no filler.
