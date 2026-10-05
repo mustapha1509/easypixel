@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>easypixel</name>
+    <displayName><![CDATA[EasyPixel – Meta Pixel & Conversions API]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Dual-delivery Meta Pixel + Conversions API tracking with GDPR consent gating and granular Purchase controls.]]></description>
+    <author><![CDATA[Nasraoui Mustapha]]></author>
+    <tab><![CDATA[advertising_marketing]]></tab>
+    <confirmUninstall><![CDATA[Are you sure you want to uninstall EasyPixel? All configuration and event logs will be deleted.]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+    <limited_countries></limited_countries>
+</module>
